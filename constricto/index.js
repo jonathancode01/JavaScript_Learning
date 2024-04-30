@@ -21,3 +21,11 @@ function Heroi (nome, classe){
 let jaspion = new Heroi('jaspion', 'robô');
 
 console.log(jaspion);
+console.log(jaspion.constructor);
+
+
+let obj = {
+    teste: 'teste',
+}
+
+console.log(obj.constructor);
