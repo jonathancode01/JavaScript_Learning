@@ -1,38 +1,37 @@
 // Crie um objeto Inimigo, com as propriedades nome e vivo (que é um boolean e inicie como true);
-// O método atirarShuriken do exercício passado deve ‘matar’ o Inimigo, setando a propriedade do Inimigo vivo como false;
+// O método atirarBala do exercício passado deve ‘matar’ o Inimigo, setando a propriedade do Inimigo vivo como false;
 
-function Jonathan(nome, qtd){
+function Bruxo(nome, qtd){
     this.nome = nome;
-    this.coldre = qtd;
-    this.atirarBala = function(inimigo){
-        if(this.coldre > 0) {
-            console.log("Pow Poew POw");
-            this.coldre -= 1;
-            inimigo.vivo = false;
-        }else{
-            console.log("Acabou as balas")
+    this.magiaqtd = qtd;
+    this.feitico = function(inimigo){
+        if (this.magiaqtd > 0) {
+            console.log("Specto Patronum");
+            this.magiaqtd -= 1;
+            inimigo.vivo = true;
+        } else {
+            console.log("Avada Kedavra");
         }
     }
 }
 
-function Inimigo(nome){
-    this.nome  = nome;
-    this.vivo = true;
+function Voldemort(nome){
+    this.nome = nome;
+    this.vivo = false;
 }
 
-let orochimaru = new Jonathan('Orochmaru');
+let bruxo = new Bruxo('Harry Potter', 3);
+let voldemort = new Voldemort('Voldemort'); 
+
+bruxo.feitico(Voldemort);
+bruxo.feitico(Voldemort);
+bruxo.feitico(Voldemort);
+bruxo.feitico(Voldemort);
+
+console.log(voldemort);
 
 
-let jonathan = new Jonathan ('Jonathan', 3);
-
-console.log(jonathan);
-
-console.log(orochimaru);
-
-jonathan.atirarBala(orochimaru);
-jonathan.atirarBala(orochimaru);
-jonathan.atirarBala(orochimaru);
-jonathan.atirarBala(orochimaru);
+// Método atirarBala sendo chamado: O método atirarBala do objeto jonathan é chamado quatro vezes, 
+// passando orochimaru como argumento. Isso simula Jonathan atirando em Orochimaru.
 
 
-console.log(orochimaru);
