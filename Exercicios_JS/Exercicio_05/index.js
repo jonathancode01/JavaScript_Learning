@@ -30,7 +30,6 @@ bruxo.feitico(Voldemort);
 
 console.log(voldemort);
 
-
 // Método atirarBala sendo chamado: O método atirarBala do objeto jonathan é chamado quatro vezes, 
 // passando orochimaru como argumento. Isso simula Jonathan atirando em Orochimaru.
 
